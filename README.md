@@ -1,0 +1,2 @@
+# IT_CM_Toolbox_Website
+This project is about creating an interactive toolbox used to cover the change management needs of IT people and bridge them with more traditional management (bridge with the work knowledge)
