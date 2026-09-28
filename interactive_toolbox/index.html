@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recherche d'outils basés sur l'utilisateur pour les projets IT</title>
+
+    <!-- Excel library -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <img
+                src="https://www.ja-sante.be/wp-content/uploads/2023/01/hub.png"
+                alt="Logo"
+                class="app-logo"
+            />
+
+            <span class="app-name">
+                Recherche d'outils basés sur l'utilisateur pour les projets IT
+            </span>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <h2>Recherche d'outils</h2>
+
+        <div class="filters">
+            <h3>Filtres :</h3>
+            <div id="keywordTags"></div>
+        </div>
+
+
+        <div class="selected-filters">
+            <h3>Filtres sélectionnés :</h3>
+            <div id="selectedTags">None</div>
+        </div>
+
+
+        <div class="selected-filters">
+            <h3>Nombre de résultats les plus probants à afficher :</h3>
+
+            <select id="resultLimit">
+                <option value="0">Tous</option>
+                <option value="3">Top 3</option>
+                <option value="5">Top 5</option>
+                <option value="10">Top 10</option>
+            </select>
+        </div>
+
+
+        <table id="resultsTable">
+
+            <thead>
+                <tr>
+                    <th>Outil</th>
+                    <th>Description</th>
+                    <th>Mot(s)-clé(s)</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </main>
+
+
+    <!-- Our JavaScript -->
+    <script src="toolbox.js"></script>
+
+</body>
+</html>
