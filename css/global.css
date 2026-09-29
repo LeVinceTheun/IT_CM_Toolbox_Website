@@ -1,3 +1,7 @@
+/* =========================
+   Body
+   ========================= */
+
 body {
     font-family: 'Segoe UI', sans-serif;
     padding: 40px;
@@ -107,4 +111,24 @@ h2 {
 .app-name {
     font-size: 1.6rem;
     font-weight: bold;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.go-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.go-button:hover {
+    background-color: #0056b3;
 }
