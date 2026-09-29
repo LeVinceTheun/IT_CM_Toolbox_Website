@@ -188,7 +188,6 @@ function updateTable() {
             filteredData.slice(0, limit);
     }
 
-
     // Display results
 
     filteredData.forEach(row => {
@@ -202,14 +201,16 @@ function updateTable() {
             .replace(/\s+/g, "-");
 
         tr.innerHTML = `
-            <td>
-                <a href="../tools/${toolPath}/">
-                    ${row.Outil}
-                </a>
-            </td>
+            <td>${row.Outil}</td>
             <td>${row.Description}</td>
             <td>${row.Etiquettes}</td>
         `;
+
+        tr.style.cursor = "pointer";
+
+        tr.addEventListener("click", () => {
+            window.location.href = `../tools/${toolPath}/`;
+        });
 
         tbody.appendChild(tr);
     });
