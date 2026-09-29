@@ -71,6 +71,14 @@ th {
     color: #334155;
 }
 
+#resultsTable tbody tr {
+    cursor: pointer;
+}
+
+#resultsTable tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
 
 /* =========================
    Titles
