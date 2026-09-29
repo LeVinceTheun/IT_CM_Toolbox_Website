@@ -6,7 +6,7 @@ let selectedKeywords = new Set();
 // Load Excel file
 // =========================
 
-fetch("data/fichier_compl_toolbox.xlsx")
+fetch("../data/fichier_compl_toolbox.xlsx")
     .then(response => {
         if (!response.ok) {
             throw new Error("Impossible de charger le fichier Excel.");
@@ -196,13 +196,20 @@ function updateTable() {
         const tr =
             document.createElement("tr");
 
+        const toolPath = row.Outil
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, "-");
 
         tr.innerHTML = `
-            <td>${row.Outil}</td>
+            <td>
+                <a href="../tools/${toolPath}/">
+                    ${row.Outil}
+                </a>
+            </td>
             <td>${row.Description}</td>
             <td>${row.Etiquettes}</td>
         `;
-
 
         tbody.appendChild(tr);
     });
