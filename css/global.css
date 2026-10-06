@@ -140,3 +140,15 @@ h2 {
 .go-button:hover {
     background-color: #0056b3;
 }
+
+/* =========================
+   Page created or not
+   ========================= */
+
+.fini-oui {
+    background-color: #d9f2d9;
+}
+
+.fini-non {
+    background-color: #f8d7da;
+}

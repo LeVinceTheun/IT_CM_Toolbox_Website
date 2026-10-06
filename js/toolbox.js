@@ -192,13 +192,18 @@ function updateTable() {
 
     filteredData.forEach(row => {
 
-        const tr =
-            document.createElement("tr");
+        const tr = document.createElement("tr");
 
         const toolPath = row.Outil
             .toLowerCase()
             .trim()
             .replace(/\s+/g, "-");
+
+        if (row.fini === "Oui") {
+            tr.classList.add("fini-oui");
+        } else if (row.fini === "Non") {
+            tr.classList.add("fini-non");
+        }
 
         tr.innerHTML = `
             <td>${row.Outil}</td>
@@ -214,7 +219,6 @@ function updateTable() {
 
         tbody.appendChild(tr);
     });
-}
 
 
 // =========================
