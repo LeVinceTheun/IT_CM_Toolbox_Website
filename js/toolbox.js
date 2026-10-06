@@ -199,9 +199,9 @@ function updateTable() {
             .trim()
             .replace(/\s+/g, "-");
 
-        if (row.fini === "Oui") {
+        if (row.Fini === "Oui") {
             tr.classList.add("fini-oui");
-        } else if (row.fini === "Non") {
+        } else if (row.Fini === "Non") {
             tr.classList.add("fini-non");
         }
 
