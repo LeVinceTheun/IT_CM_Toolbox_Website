@@ -220,6 +220,8 @@ function updateTable() {
         tbody.appendChild(tr);
     });
 
+}
+
 
 // =========================
 // Result limit listener
