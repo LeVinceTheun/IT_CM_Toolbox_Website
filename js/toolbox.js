@@ -230,3 +230,14 @@ function updateTable() {
 document
     .getElementById("resultLimit")
     .addEventListener("change", updateTable);
+
+// =========================
+// Toggle menu
+// =========================
+
+function toggleMenu() {
+
+    const menu = document.getElementById("navMenu");
+
+    menu.classList.toggle("show");
+}
