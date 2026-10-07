@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exemple Bidon</title>
+
+    <!-- Ref CSS -->
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <!-- Floating navigation -->
+    <nav class="floating-nav">
+
+        <button class="nav-toggle" onclick="toggleMenu()">
+            ☰ Navigation
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../">Tutoriel</a>
+            <a href="../interactive_toolbox">Boite à outils</a>
+        </div>
+
+    </nav>
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <img
+                src="images/hub.png"
+                alt="Logo"
+                class="app-logo"
+            />
+
+            <span class="app-name">
+                Fiche technique de l'exemple bidon
+            </span>
+        </div>
+    </nav>
+
+  <main>
+    <dl style="margin:0">
+      <div class="row">
+        <dt>But :</dt>
+        <dd>Lorem ipsum</dd>
+      </div>
+
+      <div class="row">
+        <dt>Requiert :</dt>
+        <dd>Lorem ipsum</dd>
+      </div>
+
+      <div class="row">
+        <dt>Présentation :</dt>
+        <dd class="media-space">
+          Lorem ipsum
+          <img src="../images/image_test.png" alt="Description de l'image : Exemple">
+        </dd>
+      </div>
+
+      <div class="row">
+        <dt>Exemple(s) :</dt>
+        <dd class="media-space">
+          Lorem ipsum
+          <video src="../videos/video_test.mp4" controls width="720"></video>
+        </dd>
+      </div>
+
+      <div class="row">
+        <dt>Exercice(s) d'entraînement :</dt>
+        <dd>Lorem ipsum</dd>
+      </div>
+
+      <div class="row">
+        <dt>Autres liens :</dt>
+        <dd class="links">
+          <a href="#">lien1,</a>
+          <a href="#">lien2</a>
+        </dd>
+      </div>
+    </dl>
+  </main>
+
+    <!-- Ref JavaScript -->
+    <script src="js/toolbox.js"></script>
+
+</body>
+</html>
