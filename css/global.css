@@ -212,8 +212,6 @@ h2 {
     padding: 35px 20px;
     margin: 40px auto;
 
-    max-width: 1100px;
-
     text-align: center;
 }
 
@@ -225,6 +223,17 @@ h2 {
     color: #073b63;
     font-size: 1.6rem;
     font-weight: 600;
+}
+
+.option_banner .go-button {
+    display: inline-block ; 
+    background: #109bb5 ;
+    color: white ;
+    padding: 14px 28px ;
+    border-radius: 30px ;
+    text-decoration: none ;
+    font-size: 1.05rem ;
+    font-weight: 600 ;
 }
 
 
@@ -273,7 +282,6 @@ h2 {
 .fini-non {
     background-color: #f8d7da;
 }
-
 
 
 
