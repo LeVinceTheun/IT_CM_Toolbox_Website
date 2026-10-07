@@ -283,6 +283,47 @@ h2 {
     background-color: #f8d7da;
 }
 
-
+/* Décale le contenu sous la .navbar fixe (≈ 64px de haut) */
+.fiche {
+    margin-top: 30px;
+}
+ 
+.fiche dl {
+    margin: 0;
+}
+ 
+.fiche-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 44px;
+}
+ 
+.fiche-label {
+    flex: 0 0 auto;
+    font-weight: 700;
+}
+ 
+.fiche-value {
+    margin: 0;
+}
+ 
+/* Lines for image or video */
+.fiche-value.media {
+    min-height: 80px;
+}
+ 
+.fiche-value img,
+.fiche-value video,
+.fiche-value iframe {
+    display: block;
+    max-width: 100%;
+    margin-top: 10px;
+}
+ 
+.fiche-links a {
+    display: block;
+    color: inherit;
+}
+ 
 
 
