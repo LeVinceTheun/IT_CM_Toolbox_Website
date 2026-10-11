@@ -4,22 +4,14 @@ class AppNav extends HTMLElement {
       <link rel="stylesheet" href="../css/global.css">
       <nav class="navbar">
           <div class="navbar-content">
-              <img
-                  src="../images/hub.png"
-                  alt="Logo"
-                  class="app-logo"
-              />
-
-              <span class="app-name">
-                  Fiche technique de l'exemple bidon
-              </span>
+              <img src="../images/hub.png" alt="Logo" class="app-logo" />
+              <span class="app-name">Fiche technique de l'exemple bidon</span>
           </div>
       </nav>
 
-      <!-- Floating navigation -->
       <nav class="floating-nav">
-
-          <button class="nav-toggle" onclick="toggleMenu()">
+          <!-- Removed inline onclick -->
+          <button class="nav-toggle" id="navToggleBtn">
               ☰ Navigation
           </button>
 
@@ -27,9 +19,16 @@ class AppNav extends HTMLElement {
               <a href="../">Tutoriel</a>
               <a href="../interactive_toolbox">Boite à outils</a>
           </div>
-
       </nav>
     `;
+
+    // Attach click listener directly within the component
+    const toggleBtn = this.querySelector('#navToggleBtn');
+    const navMenu = this.querySelector('#navMenu');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active'); // Adjust 'active' to match your CSS class
+    });
   }
 }
 
