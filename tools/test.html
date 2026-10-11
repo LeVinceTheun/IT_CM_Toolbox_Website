@@ -2,89 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Technique</title>
+    
 
-    <title>Exemple Bidon</title>
-
-    <!-- Ref CSS -->
     <link rel="stylesheet" href="../css/global.css">
+    <script src="../js/navbar.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-content">
-            <img
-                src="../images/hub.png"
-                alt="Logo"
-                class="app-logo"
-            />
+    <!-- This renders the custom navbar and floating menu automatically -->
+    <app-nav></app-nav>
 
-            <span class="app-name">
-                Fiche technique de l'exemple bidon
-            </span>
-        </div>
-    </nav>
-
-    <!-- Floating navigation -->
-    <nav class="floating-nav">
-
-        <button class="nav-toggle" onclick="toggleMenu()">
-            ☰ Navigation
-        </button>
-
-        <div class="nav-menu" id="navMenu">
-            <a href="../">Tutoriel</a>
-            <a href="../interactive_toolbox">Boite à outils</a>
-        </div>
-
-    </nav>
-
-  <main class="fiche">
-    <dl>
-      <div class="fiche-row">
-        <dt class="fiche-label">But :</dt>
-        <dd class="fiche-value">Lorem ipsum</dd>
-      </div>
- 
-      <div class="fiche-row">
-        <dt class="fiche-label">Requiert :</dt>
-        <dd class="fiche-value">Lorem ipsum</dd>
-      </div>
- 
-      <div class="fiche-row">
-        <dt class="fiche-label">Présentation :</dt>
-        <dd class="fiche-value media">
-          Lorem ipsum
-          <img src="../images/image_test.png" alt="Description de l'image = Exemple">
-        </dd>
-      </div>
- 
-      <div class="fiche-row">
-        <dt class="fiche-label">Exemple(s) :</dt>
-        <dd class="fiche-value media">
-          Lorem ipsum
-          <video src="../videos/video_test.mp4" controls width="720"></video>
-        </dd>
-      </div>
- 
-      <div class="fiche-row">
-        <dt class="fiche-label">Exercice(s) d'entraînement :</dt>
-        <dd class="fiche-value">Lorem ipsum</dd>
-      </div>
- 
-      <div class="fiche-row">
-        <dt class="fiche-label">Autres liens :</dt>
-        <dd class="fiche-value fiche-links">
-          <a href="#">lien1,</a>
-          <a href="#">lien2</a>
-        </dd>
-      </div>
-    </dl>
-  </main>
-
-    <!-- Ref JavaScript -->
-    <script src="../js/toolbox.js"></script>
+    <!-- Main Content of your page -->
+    <main style="padding: 20px;">
+        <h1>Contenu de la page</h1>
+        <p>Votre contenu principal va ici...</p>
+    </main>
 
 </body>
 </html>
