@@ -26,8 +26,11 @@ class AppNav extends HTMLElement {
     const toggleBtn = this.querySelector('#navToggleBtn');
     const navMenu = this.querySelector('#navMenu');
 
+    // Debugging test
     toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active'); // Adjust 'active' to match your CSS class
+      console.log("Button was clicked!");
+      navMenu.classList.toggle('show');
+      console.log("Current menu classes:", navMenu.className);
     });
   }
 }
