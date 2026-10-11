@@ -35,7 +35,6 @@ class AppNav extends HTMLElement {
     toggleBtn.addEventListener('click', (event) => {
       event.stopPropagation(); // Prevents instant closing
       navMenu.classList.toggle('show');
-      console.log("Toggled! Current classes:", navMenu.className);
     });
 
     // Close the menu if you click anywhere else on the page
