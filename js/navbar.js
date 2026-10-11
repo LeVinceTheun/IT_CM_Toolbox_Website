@@ -10,6 +10,7 @@ class AppNav extends HTMLElement {
       </nav>
 
       <nav class="floating-nav">
+          <!-- Removed inline onclick -->
           <button class="nav-toggle" id="navToggleBtn">
               ☰ Navigation
           </button>
@@ -21,12 +22,12 @@ class AppNav extends HTMLElement {
       </nav>
     `;
 
+    // Attach click listener directly within the component
     const toggleBtn = this.querySelector('#navToggleBtn');
     const navMenu = this.querySelector('#navMenu');
 
     toggleBtn.addEventListener('click', () => {
-      console.log('Button clicked!'); // Check if this prints in F12 console
-      navMenu.classList.toggle('active');
+      navMenu.classList.toggle('active'); // Adjust 'active' to match your CSS class
     });
   }
 }
