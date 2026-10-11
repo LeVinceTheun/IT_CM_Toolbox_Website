@@ -9,7 +9,6 @@ function toggleMenu() {
 class AppNav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <link rel="stylesheet" href="../css/global.css">
       <nav class="navbar">
           <div class="navbar-content">
               <img src="../images/hub.png" alt="Logo" class="app-logo" />
@@ -18,7 +17,7 @@ class AppNav extends HTMLElement {
       </nav>
 
       <nav class="floating-nav">
-          <button class="nav-toggle" id="navToggleBtn">
+          <button class="nav-toggle" id="navToggleBtn" type="button">
               ☰ Navigation
           </button>
 
@@ -29,12 +28,19 @@ class AppNav extends HTMLElement {
       </nav>
     `;
 
+    // Target elements scoped strictly inside this component
     const toggleBtn = this.querySelector('#navToggleBtn');
     const navMenu = this.querySelector('#navMenu');
 
-    toggleBtn.addEventListener('click', () => {
-      console.log('Button clicked!'); // Check if this prints in F12 console
-      navMenu.classList.toggle('active');
+    toggleBtn.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevents instant closing
+      navMenu.classList.toggle('show');
+      console.log("Toggled! Current classes:", navMenu.className);
+    });
+
+    // Close the menu if you click anywhere else on the page
+    document.addEventListener('click', () => {
+      navMenu.classList.remove('show');
     });
   }
 }
