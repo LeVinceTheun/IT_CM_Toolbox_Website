@@ -250,9 +250,11 @@ function toggleMenu() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector('.carousel_carouselItemWrapper__EPKIt');
+    if (!track) return; // Exit safely if carousel isn't on this page
+
     const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.carousel_caret-right');
-    const prevButton = document.querySelector('.carousel_caret-left');
+    const nextButton = document.querySelector('.caret-right');
+    const prevButton = document.querySelector('.caret-left');
     const bubbles = document.querySelectorAll('.carousel_bubble__h_edT');
     const progressText = document.querySelector('.carousel_lineWrapper__RP4Yk p');
     const progressBar = document.querySelector('.carousel_progress__F5zal div');
@@ -261,10 +263,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalSlides = slides.length;
 
     function updateCarousel() {
-        // Move the track based on current index (each slide is 100% width)
+        // Move the track precisely by 100% per slide
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
         
-        // Update text (e.g., "1 sur 6")
+        // Update text counter (e.g., "1 sur 6")
         if (progressText) {
             progressText.textContent = `${currentIndex + 1} sur ${totalSlides}`;
         }
@@ -285,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Next button click (loops back to start if at the end)
+    // Next button click
     if (nextButton) {
         nextButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % totalSlides;
@@ -293,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Previous button click (loops to end if at the start)
+    // Previous button click
     if (prevButton) {
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;

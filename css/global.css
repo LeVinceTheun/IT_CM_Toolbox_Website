@@ -350,15 +350,13 @@ h2 {
 
 .carousel_carouselItemWrapper__EPKIt {
     display: flex;
-    flex-direction: row;
-    will-change: transform;
+    transition: transform 0.3s ease-in-out;
 }
 
 .carouselItem_carouselItem__uF46n {
     min-width: 100%;
+    flex: 0 0 100%;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
 }
 
 .text-image {
