@@ -8,12 +8,11 @@
     <title>Recherche d'outils basés sur l'utilisateur pour les projets IT</title>
 
     <link rel="stylesheet" href="../css/global.css">
-    
+
     <!-- Ref JavaScript -->
     <script src="../js/toolbox.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
     <script src="../js/navbar.js"></script> 
-
 </head>
 
 <body>
@@ -21,45 +20,47 @@
     <app-nav></app-nav>
 
     <main>
-            <h2>Recherche d'outils</h2>
 
-            <div class="filters">
-                <h3>Filtres :</h3>
-                <div id="keywordTags"></div>
-            </div>
+        <h2>Recherche d'outils</h2>
 
-
-            <div class="selected-filters">
-                <h3>Filtres sélectionnés :</h3>
-                <div id="selectedTags">None</div>
-            </div>
+        <div class="filters">
+            <h3>Filtres :</h3>
+            <div id="keywordTags"></div>
+        </div>
 
 
-            <div class="selected-filters">
-                <h3>Nombre de résultats les plus probants à afficher :</h3>
-
-                <select id="resultLimit">
-                    <option value="0">Tous</option>
-                    <option value="3">Top 3</option>
-                    <option value="5">Top 5</option>
-                    <option value="10">Top 10</option>
-                </select>
-            </div>
+        <div class="selected-filters">
+            <h3>Filtres sélectionnés :</h3>
+            <div id="selectedTags">None</div>
+        </div>
 
 
-            <table id="resultsTable">
+        <div class="selected-filters">
+            <h3>Nombre de résultats les plus probants à afficher :</h3>
 
-                <thead>
-                    <tr>
-                        <th>Outil</th>
-                        <th>Description</th>
-                        <th>Mot(s)-clé(s)</th>
-                    </tr>
-                </thead>
+            <select id="resultLimit">
+                <option value="0">Tous</option>
+                <option value="3">Top 3</option>
+                <option value="5">Top 5</option>
+                <option value="10">Top 10</option>
+            </select>
+        </div>
 
-                <tbody></tbody>
 
-            </table>
+        <table id="resultsTable">
+
+            <thead>
+                <tr>
+                    <th>Outil</th>
+                    <th>Description</th>
+                    <th>Mot(s)-clé(s)</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
     </main>
 
 
