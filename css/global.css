@@ -2,10 +2,30 @@
    Body
    ========================= */
 
+/* Overall page background */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    padding: 40px;
-    background: #f9fafb;
+    background-color: #f4f6f8; /* Soft grey/off-white background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Centered content container */
+.page-wrapper {
+    max-width: 1200px;         /* Controls how wide your content area can get */
+    margin: 40px auto;         /* Centers the container horizontally with top/bottom spacing */
+    background-color: #ffffff; /* Crisp white background for your actual content */
+    border-radius: 12px;       /* Softly rounds the corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Subtle shadow to lift it off the background */
+    padding: 40px;             /* Internal padding so content doesn't touch the edges */
+    box-sizing: border-box;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 1240px) {
+    .page-wrapper {
+        margin: 20px;          /* Adds breathing room on smaller screens */
+        padding: 20px;
+    }
 }
 
 
