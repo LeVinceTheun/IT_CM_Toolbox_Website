@@ -5,42 +5,45 @@ let selectedKeywords = new Set();
 // =========================
 // Load Excel file
 // =========================
+// Check if a specific toolbox element exists on the current page before trying to fetch
+const toolboxTableContainer = document.getElementById("resultsTable"); 
 
-fetch("../data/fichier_compl_toolbox.xlsx")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Impossible de charger le fichier Excel.");
-        }
+if (toolboxTableContainer) {
+    fetch("../data/fichier_compl_toolbox.xlsx")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Impossible de charger le fichier Excel.");
+            }
 
-        return response.arrayBuffer();
-    })
-    .then(data => {
+            return response.arrayBuffer();
+        })
+        .then(data => {
 
-        const workbook = XLSX.read(data, {
-            type: "array"
+            const workbook = XLSX.read(data, {
+                type: "array"
+            });
+
+            const sheetName = workbook.SheetNames[0];
+
+            const worksheet = workbook.Sheets[sheetName];
+
+            const jsonData = XLSX.utils.sheet_to_json(
+                worksheet,
+                { defval: "" }
+            );
+
+            allData = jsonData;
+
+            generateKeywordTags();
+            updateTable();
+        })
+        .catch(error => {
+            console.error(
+                "Erreur lors du chargement du fichier Excel :",
+                error
+            );
         });
-
-        const sheetName = workbook.SheetNames[0];
-
-        const worksheet = workbook.Sheets[sheetName];
-
-        const jsonData = XLSX.utils.sheet_to_json(
-            worksheet,
-            { defval: "" }
-        );
-
-        allData = jsonData;
-
-        generateKeywordTags();
-        updateTable();
-    })
-    .catch(error => {
-        console.error(
-            "Erreur lors du chargement du fichier Excel :",
-            error
-        );
-    });
-
+}
 
 // =========================
 // Generate keyword tags
