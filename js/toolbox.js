@@ -224,12 +224,14 @@ function updateTable() {
 
 
 // =========================
-// Result limit listener
+// Result limit listener (Safe version)
 // =========================
 
-document
-    .getElementById("resultLimit")
-    .addEventListener("change", updateTable)
+const resultLimitElement = document.getElementById("resultLimit");
+
+if (resultLimitElement) {
+    resultLimitElement.addEventListener("change", updateTable);
+}
 
 // =========================
 // Toggle menu
