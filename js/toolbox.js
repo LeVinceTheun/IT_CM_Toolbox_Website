@@ -229,7 +229,7 @@ function updateTable() {
 
 document
     .getElementById("resultLimit")
-    .addEventListener("change", updateTable);
+    .addEventListener("change", updateTable)
 
 // =========================
 // Toggle menu
