@@ -326,4 +326,112 @@ h2 {
 }
  
 
+/* Carousel Container & Background */
+.carousel-background, .carousel_background__Cd5Ek {
+    display: block;
+    width: 100%;
+    background-color: #f9f9f9; /* Adjust background color as needed */
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel_carouselWrapper__rkHEW {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel_carouselItemWrapper__EPKIt {
+    display: flex;
+    flex-direction: row;
+    will-change: transform;
+}
+
+.carouselItem_carouselItem__uF46n {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.text-image {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Carets & Navigation Controls */
+.carousel_caretWrapper__Hb21n {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.carousel_caret__psJO9 {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.carousel_caret__psJO9 svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Progress Bar & Bubbles */
+.carousel_lineWrapper__RP4Yk {
+    text-align: center;
+    min-width: 150px;
+}
+
+.carousel_progress__F5zal {
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.carousel_bubbleWrapper__4e78Z {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.carousel_bubble__h_edT {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel_currentBubble__r81YZ {
+    background-color: var(--primary-color, #007bff);
+}
 
