@@ -241,3 +241,72 @@ function toggleMenu() {
 
     menu.classList.toggle("show");
 }
+
+// =========================
+// Carousel
+// =========================
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector('.carousel_carouselItemWrapper__EPKIt');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel_caret-right');
+    const prevButton = document.querySelector('.carousel_caret-left');
+    const bubbles = document.querySelectorAll('.carousel_bubble__h_edT');
+    const progressText = document.querySelector('.carousel_lineWrapper__RP4Yk p');
+    const progressBar = document.querySelector('.carousel_progress__F5zal div');
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarousel() {
+        // Move the track based on current index (each slide is 100% width)
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update text (e.g., "1 sur 6")
+        if (progressText) {
+            progressText.textContent = `${currentIndex + 1} sur ${totalSlides}`;
+        }
+
+        // Update progress bar width percentage
+        if (progressBar) {
+            const percentage = ((currentIndex + 1) / totalSlides) * 100;
+            progressBar.style.width = `${percentage}%`;
+        }
+
+        // Update active bubble state
+        bubbles.forEach((bubble, index) => {
+            if (index === currentIndex) {
+                bubble.classList.add('carousel_currentBubble__r81YZ');
+            } else {
+                bubble.classList.remove('carousel_currentBubble__r81YZ');
+            }
+        });
+    }
+
+    // Next button click (loops back to start if at the end)
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        });
+    }
+
+    // Previous button click (loops to end if at the start)
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+    }
+
+    // Clickable bubbles for direct navigation
+    bubbles.forEach((bubble, index) => {
+        bubble.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    // Initialize layout on load
+    updateCarousel();
+});
