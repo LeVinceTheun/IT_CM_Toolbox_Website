@@ -5,6 +5,7 @@ let selectedKeywords = new Set();
 // =========================
 // Load Excel file
 // =========================
+
 // Check if a specific toolbox element exists on the current page before trying to fetch
 const toolboxTableContainer = document.getElementById("resultsTable"); 
 
@@ -209,9 +210,9 @@ function updateTable() {
         }
 
         tr.innerHTML = `
-            <td>${row.Outil}</td>
+            <td><b>${row.Outil}</b></td>
             <td>${row.Description}</td>
-            <td>${row.Etiquettes}</td>
+            <td><b><i>${row.Etiquettes}</i></b></td>
         `;
 
         tr.style.cursor = "pointer";
