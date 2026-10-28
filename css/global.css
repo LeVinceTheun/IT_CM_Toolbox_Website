@@ -17,6 +17,10 @@ body {
     border-radius: 12px;       /* Softly rounds the corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Subtle shadow to lift it off the background */
     padding: 40px;             /* Internal padding so content doesn't touch the edges */
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -240,10 +244,11 @@ h2 {
     background-color: #1e40af;
     border-radius: 16px;
 
-    padding: 35px 20px;
-    margin: 20px auto;
+    padding: 15px 15px;
+    padding-left: 40px;
+    margin: 10px auto;
 
-    text-align: center;
+    text-align: start;
 }
 
 /* Question */
@@ -409,7 +414,7 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .carousel_caret__psJO9 {
