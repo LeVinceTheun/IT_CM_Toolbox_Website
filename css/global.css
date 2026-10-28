@@ -235,6 +235,17 @@ h2 {
     text-align: center;
 }
 
+.title_banner {
+    color:#ccc;
+    background-color: #1e40af;
+    border-radius: 16px;
+
+    padding: 35px 20px;
+    margin: 20px auto;
+
+    text-align: center;
+}
+
 /* Question */
 
 .option_banner h3 {
