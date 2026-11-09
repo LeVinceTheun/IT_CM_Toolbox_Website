@@ -1,6 +1,6 @@
 let allData = [];
 let selectedKeywords = new Set();
-let searchMode = "closest"; // "strict" | "closest" | "auto"
+let searchMode = "auto"; // "strict" | "closest" | "auto"
 
 // =========================
 // Load Excel file
