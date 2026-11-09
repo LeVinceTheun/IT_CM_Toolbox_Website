@@ -218,7 +218,7 @@ function updateTable() {
         tr.style.cursor = "pointer";
 
         tr.addEventListener("click", () => {
-            window.location.href = `../tools/${toolPath}/`;
+            window.location.href = `../tools/${toolPath}.html`;
         });
 
         tbody.appendChild(tr);
