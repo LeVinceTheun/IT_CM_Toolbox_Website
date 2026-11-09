@@ -30,7 +30,7 @@ class AppNav extends HTMLElement {
 
     // Fill the title dynamically
     this.querySelector('.app-name').textContent =
-      '${document.title}';
+      `${document.title}`;
 
     // Target elements scoped strictly inside this component
     const toggleBtn = this.querySelector('#navToggleBtn');
