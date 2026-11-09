@@ -25,31 +25,32 @@
                 <div id="keywordTags"></div>
             </div>
 
-
             <div class="selected-filters"  style="padding-left: 20px;">
                 <h3>Filtres sélectionnés :</h3>
                 <div id="selectedTags">None</div>
             </div>
 
-
-            <div class="selected-filters"  style="padding-left: 20px;">
-                <h3>Nombre de résultats les plus probants à afficher :</h3>
-
-                <select id="resultLimit">
-                    <option value="0">Tous</option>
-                    <option value="3">Top 3</option>
-                    <option value="5">Top 5</option>
-                    <option value="10">Top 10</option>
-                </select>
-
-                <div class="search-mode" id="searchMode">
-                    <button type="button" class="mode-btn" data-mode="strict">=</button>
-                    <button type="button" class="mode-btn active" data-mode="closest">±</button>
-                    <button type="button" class="mode-btn" data-mode="auto">⋕</button>
+            <div class="split">
+                <div class="selected-filters"  style="padding-left: 20px;">
+                    <h3>Nombre de résultats les plus probants à afficher :</h3>
+                    <select id="resultLimit">
+                        <option value="0">Tous</option>
+                        <option value="3">Top 3</option>
+                        <option value="5">Top 5</option>
+                        <option value="10">Top 10</option>
+                    </select>
                 </div>
-                <p id="modeInfo"></p>
+                
+                <div class="selected-filters"  style="padding-left: 20px;">
+                    <h3>Mode sélectionné :</h3>
+                    <div class="search-mode" id="searchMode" style="padding-left: 20px;">
+                        <button type="button" class="mode-btn" data-mode="strict">=</button>
+                        <button type="button" class="mode-btn active" data-mode="closest">±</button>
+                        <button type="button" class="mode-btn" data-mode="auto">⋕</button>
+                    </div>
+                    <p id="modeInfo"></p>
+                </div>
             </div>
-
 
             <table id="resultsTable">
 

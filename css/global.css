@@ -312,6 +312,16 @@ h2 {
 }
 
 /* =========================
+   Two Splitted parts - invisible table
+   ========================= */
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* two equal columns */
+    gap: 20px;
+}
+
+/* =========================
    Page created or not
    ========================= */
 
