@@ -1,6 +1,6 @@
 let allData = [];
 let selectedKeywords = new Set();
-
+let searchMode = "auto"; // "strict" | "closest" | "auto"
 
 // =========================
 // Load Excel file
@@ -172,15 +172,40 @@ function updateTable() {
 
 
     // Apply keyword filters
+    const modeInfo = document.getElementById("modeInfo");
+    if (modeInfo) modeInfo.textContent = "";
 
     if (selectedKeywords.size > 0) {
 
-        filteredData = filteredData
+        const total = selectedKeywords.size;
+
+        // Strict: the tool must have ALL selected keywords
+        const strictResults = filteredData.filter(
+            row => row.matchCount === total
+        );
+
+        // Closest fit: at least one keyword, best matches first
+        const closestResults = filteredData
             .filter(row => row.matchCount > 0)
-            .sort(
-                (a, b) =>
-                    b.matchCount - a.matchCount
-            );
+            .sort((a, b) => b.matchCount - a.matchCount);
+
+        if (searchMode === "strict") {
+            filteredData = strictResults;
+
+        } else if (searchMode === "closest") {
+            filteredData = closestResults;
+
+        } else { // auto
+            if (strictResults.length > 0) {
+                filteredData = strictResults;
+            } else {
+                filteredData = closestResults;
+                if (modeInfo) {
+                    modeInfo.textContent =
+                        "No exact match found: showing the closest fits.";
+                }
+            }
+        }
     }
 
 
@@ -236,6 +261,23 @@ const resultLimitElement = document.getElementById("resultLimit");
 if (resultLimitElement) {
     resultLimitElement.addEventListener("change", updateTable);
 }
+
+// =========================
+// Search mode buttons
+// =========================
+
+const modeButtons = document.querySelectorAll(".mode-btn");
+
+modeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        searchMode = btn.dataset.mode;
+
+        modeButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        updateTable();
+    });
+});
 
 // =========================
 // Toggle menu

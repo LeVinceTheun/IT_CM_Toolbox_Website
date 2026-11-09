@@ -296,6 +296,10 @@ h2 {
         box-shadow 0.2s ease;
 }
 
+.mode-btn.active {
+    background: #333;
+    color: #fff;
+}
 
 /* Hover */
 
