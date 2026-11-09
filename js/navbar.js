@@ -12,7 +12,7 @@ class AppNav extends HTMLElement {
       <nav class="navbar">
           <div class="navbar-content">
               <img src="../images/hub.png" alt="Logo" class="app-logo" />
-              <span class="app-name">Fiche technique de l'exemple bidon</span>
+              <span class="app-name"></span>
           </div>
       </nav>
 
@@ -27,6 +27,10 @@ class AppNav extends HTMLElement {
           </div>
       </nav>
     `;
+
+    // Fill the title dynamically
+    this.querySelector('.app-name').textContent =
+      'Fiche technique ${document.title}';
 
     // Target elements scoped strictly inside this component
     const toggleBtn = this.querySelector('#navToggleBtn');
