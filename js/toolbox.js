@@ -192,6 +192,10 @@ function updateTable() {
         if (searchMode === "strict") {
             filteredData = strictResults;
 
+            if (strictResults.length === 0 && modeInfo) {
+        modeInfo.textContent = "Aucun résultat ne répond à tous ces critères / mots-clés";
+            }
+
         } else if (searchMode === "closest") {
             filteredData = closestResults;
 
@@ -202,7 +206,7 @@ function updateTable() {
                 filteredData = closestResults;
                 if (modeInfo) {
                     modeInfo.textContent =
-                        "No exact match found: showing the closest fits.";
+                        "Pas de résultats exacts trouvés, montre les résultats les plus proches";
                 }
             }
         }
