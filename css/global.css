@@ -112,6 +112,13 @@ h2 {
     color: #1e40af;
 }
 
+/* =========================
+   Content
+   ========================= */
+
+.content {
+    display: block; /* Forces this specific text onto a new line */
+}
 
 /* =========================
    Navigation bar
@@ -345,21 +352,25 @@ h2 {
 .fiche-row {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 5px;
     margin-bottom: 34px;
+    padding-left: 5px
 }
- 
-
 
 .fiche-label {
     flex: 0 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #7f7f7f; 
+    border-radius: 4px;        
     font-weight: 700;
-    padding-left: 20px;
+    padding: 6px 12px;         
 }
  
 .fiche-value {
     margin: 0;
-    padding-left: 20px;
+    flex: 1;             
+    padding-left: 12px;
 }
  
 /* Lines for image or video */
