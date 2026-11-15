@@ -118,6 +118,7 @@ h2 {
 
 .content {
     display: block; /* Forces this specific text onto a new line */
+    margin-left: 12px;
 }
 
 /* =========================
